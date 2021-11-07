@@ -58,4 +58,7 @@
 - Gắn hai card mạng cho một máy ảo trên Vmware, một để Nat, một để Briged :
 ![a](https://i.imgur.com/KBRYInt.png)
 
+
+![a](https://prnt.sc/1ymhkod)
+
 		
