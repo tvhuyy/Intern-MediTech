@@ -7,17 +7,21 @@
 
 - Ở chế độ này, card mạng trên máy ảo được gắn vào VMnet0, VMnet0 này liên kết trực tiếp đến card mạng trên máy thật.
 - Máy ảo lúc này sẽ kết nối internet thông qua card mạng vật lý và có chung dải mạng với máy thật.
+
 ![a](https://i.imgur.com/QRqjiQp.png)
 
 **Chế độ NAT** :
  
  - Ở chế độ này, card mạng của máy ảo liên kết với VMnet8 cho phép đi ra internet thông qua card mạng vật lý bằng cơ chế NAT.
  - Lúc này lớp mạng của máy ảo khác hoàn toàn với card mạng vật lý bên ngoài, hai mạng hoàn toàn tách biệt.
+
 ![a](https://i.imgur.com/WvaGSFz.png)
+
 **Chế độ Host-Only** :
 
 - Ở chế độ này, máy ảo được kết nối với VMnet có tính năng host-only. Khi tạo một card mạng ảo trên VMware thì cũng sẽ tạo ra card mạng ảo tương ứng trên máy thật.
 - Chế độ này, máy ảo không có kết nối vào mạng vật lý bên ngoài hay internet thông qua máy thật, có nghĩa là mạng VMnet Host-only tách biệt hoàn toàn với mạng vật lý.
+
 ![a](https://i.imgur.com/0O0z3PU.png)
 
 ### 1.2 Port Forwarding, NAT Advanced :
