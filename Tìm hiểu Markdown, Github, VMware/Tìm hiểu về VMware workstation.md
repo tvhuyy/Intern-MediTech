@@ -59,9 +59,6 @@
 ![a](https://i.imgur.com/KBRYInt.png)
 
 
-![a](https://prnt.sc/1ymhkod.png)
-
-![a](https://i.imgur.com/hoUplWL.png)
 
 
 
