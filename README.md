@@ -1,1 +1,1 @@
-# Thư mục tìm hiểu trong quá trình thực tập tại MediTech JSC
+# Thư mục ghi chú thông tin trong quá trình tự học
