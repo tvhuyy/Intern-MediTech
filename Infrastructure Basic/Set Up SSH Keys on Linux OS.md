@@ -52,6 +52,21 @@
 
     ![a](https://imgur.com/tfufapY.png)
 
+#### Sao chép khóa theo cách thủ công
+
+- Ta sẽ nối nội dung của tệp `id_rsa.pub` vào `~/.ssh/authorized_keys` trên remote server theo cách thủ công.
+- Đầu tiên ta xuất nội dung của `id_rsa.pub` ra màn hình :
+    ```
+    cat ~/.ssh/id_rsa.pub
+    ```
+- Copy nội dung vừa được xuất ra.
+- Đăng nhập vào remote server và nối nội dung vừa copy vào file `authorized_keys` (thay thế "public_key_string" bằng nội dung đã copy) :
+    ```
+    echo public_key_string >> ~/.ssh/authorized_keys
+    ```
+
+- Điều này cũng được sử dụng khi quản trị viên muốn add thêm client có thể truy cập vào remote server.
+
 ### Bước 3 : Đăng nhập vào Linux Server bằng SSH Keys
 
 - Bây giờ ta có thể đăng nhập vào remote server mà không cần đến mật khẩu của account.
