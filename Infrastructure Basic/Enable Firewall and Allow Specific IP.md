@@ -34,3 +34,8 @@
     ![a](https://imgur.com/4nl3WKe.png)
 
 - Ở bước cuối cùng, ta đặt tên cho Rule (ví dụ : Remote Desktop - IP Restriction Rule) rồi ấn Finish.
+
+
+- tham khảo thêm : 
+
+    ![a](https://imgur.com/0vIjS0y.png)
