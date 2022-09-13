@@ -1,6 +1,16 @@
 ## Bonding interface network on CentOS
 
 - Bonding interface là một cơ chế cho phép cấu hình từ 2 đến nhiều interface vật lý kết hợp thành 1 interface ảo bằng cách sử dụng `module kernel bonding` trên Linux. Điều này mang lại các lợi ích như : tăng badwidth, HA, Load Balancing.
+- Các mode bonding network :
+    - **mode=0 (balance-rr)** : Mode này dựa trên Round-robin policy và nó là mode default. Mode này cung cấp các tính năng chịu lỗi và load balacing. Nó truyền các gói dữ liệu theo kiểu round-robin từ slave khả dụng đầu tiên đến slave cuối cùng.
+    - **mode=1 (active-backup)** : Mode này dựa trên Active-backup policy. Chỉ có một slave được hoạt động và một slave khác sẽ active khi slave đầu bị lỗi. MAC address của bond chỉ có sẵn trên network adapter để tránh gây nhầm lẫn cho switch. Mode này cung cấp khả năng dự phòng.
+    - **mode=2 (balance-xor)** : Mode này chuyển phát các gói tin dựa trên phép toán `XOR` (Source MAC)(Destination MAC). Thuật toán sẽ tự lựa chọn cổng NIC member cho mỗi gói tin dựa trên địa chỉ des MAC. Mode này sẽ cung cấp khả năng load balancing và chịu lỗi.
+    - **mode=3 (broadcast)** : Mode này dựa trên broadcast policy, nó sẽ truyền mọi thứ trên tất cả các slave phụ. Nó cung cấp khả năng chịu lỗi.
+    - **mode=4 (802.3ad)** : Mode này được gọi là `Dynamic Link Aggregation`, nó tạo ta các aggregation groups có cùng tốc độ. Mode này yêu cầu switch có hỗ trợ IEEE 802.3ad. Việc lựa chọn slave để lưu lượng gửi đi được thực hiện dựa trên phương thức hashing. Điều này có thể được thay đổi từ phương thức XOR thông qua tùy chọn `xmit_hash_policy`.
+    - **mode=5 (balance-tlb)** : Mode này được gọi là `Adaptive transmit load balancing`. Lưu lượng gửi đi được phân phối dựa trên tải hiện tại trên mỗi slave và lưu lượng đến được nhận bởi slave hiện tại. Nếu traffic failed, slave nhận không thành công sẽ được thay thế bằng MAC address của slave khác. Mode này không yêu cầu bất kỳ switch đặc biệt nào.
+    - **mode=6 (balance-alb)** : Mode này dựa trên `Active Load Balancing` policy để chịu lỗi và cân bằng tải. Bao gồm load balancing truyền và nhận cho traffic IPv4. Load balancing nhận vào được thực hiện thông qua ARP negotiation.
+
+### Bonding on Centos 7
 
 ### 1. Cài đặt module bonding
 
@@ -82,3 +92,48 @@
     ```
     service network restart
     ```
+
+### Bonding on Centos 8
+
+- List các network device : `nmcli device`
+
+    ![a](https://imgur.com/Oz5Hlh6.png)
+
+- Thêm bonding device với tên bất kì (ví dụ này sử dụng tên bond0). Lưu ý đặt `mode number` cho phù hợp (mode=) (ví dụ này chọn mode `balance-alb`).
+    ```
+    nmcli connection add type bond ifname bond0 con-name bond0 bond.options "mode=balance-alb"
+    ```
+
+    ![a](https://imgur.com/HyAp6Bm.png)
+
+- Thêm các member devices cho bonding :
+    ```
+    nmcli connection add type ethernet ifname eno1 master bond0
+    ```
+
+    ![a](https://imgur.com/MYtZbhj.png)
+
+- Kiểm tra lại các network device đã add : `nmcli device` - `nmcli connection`
+
+    ![a](https://imgur.com/s5cLSXt.png)
+
+    ![a](https://imgur.com/kMJUiM0.png)
+
+- Đặt IP address cho bonding device và restart :
+    ```
+    nmcli connection modify bond0 ipv4.addresses 10.88.88.20/24
+    nmcli connection modify bond0 ipv4.gateway 10.88.88.2
+    nmcli connection modify bond0 ipv4.dns "8.8.8.8 8.8.4.4"
+    nmcli connection modify bond0 ipv4.dns-search "google.com"
+    nmcli connection modify bond0 ipv4.method manual
+    nmcli connection down bond0
+    nmcli connection up bond0
+    ```
+
+    ![a](https://imgur.com/HigmknR.png)
+
+- Xác nhận lại trạng thái của bond : `cat /proc/net/bonding/bond0`
+
+    ![a](https://imgur.com/jY90eKt.png)
+
+- File cấu hình được lưu ở `/etc/sysconfig/network-scripts`
