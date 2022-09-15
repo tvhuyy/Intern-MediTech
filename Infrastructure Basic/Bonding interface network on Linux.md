@@ -1,4 +1,4 @@
-## Bonding interface network on CentOS
+## Bonding interface network on Linux
 
 - Bonding interface là một cơ chế cho phép cấu hình từ 2 đến nhiều interface vật lý kết hợp thành 1 interface ảo bằng cách sử dụng `module kernel bonding` trên Linux. Điều này mang lại các lợi ích như : tăng badwidth, HA, Load Balancing.
 - Các mode bonding network :
@@ -12,7 +12,7 @@
 
 ### Bonding on Centos 7
 
-### 1. Cài đặt module bonding
+#### 1. Cài đặt module bonding
 
 - Đầu tiên ta cần kiểm tra xem trên hệ thống Linux đã load module bonding cho tính năng bonding interface hay chưa, mặc định là chưa được load.
     ```
@@ -30,7 +30,7 @@
     ```
 - *Lưu ý* : Nếu mới chỉ tạo 1 bonding interface `bond0` thì cấu hình 1 dòng alias như trên.
 
-### 2. Cấu hình bonding interface network
+#### 2. Cấu hình bonding interface network
 
 #### 2.1 Khởi tạo cấu hình bonding interface MASTER
 
@@ -86,7 +86,7 @@
     ```
 - *Lưu ý* : slave=yes và master=bond0
 
-### 3. Khởi động card bond0
+#### 3. Khởi động card bond0
 
 - Tiếp theo ta sẽ khởi động lại Network Service để up các card mạng cùng card bond0 mới được cấu hình lên. Trong một số trường hợp bạn cần khởi động lại hệ thống để có thể hoạt động các cổng interface đã cấu hình.
     ```
@@ -137,3 +137,39 @@
     ![a](https://imgur.com/jY90eKt.png)
 
 - File cấu hình được lưu ở `/etc/sysconfig/network-scripts`
+
+### Bonding on Ubuntu 22.04
+
+- Theo mặc định từ bản Ubuntu 18.04 trở đi, Ubuntu sẽ sử dụng config mạng bằng công cụ `Netplan`. Netplan lưu cấu hình bằng file `yaml` được lưu tại `etc/netplan/(file yaml)`.
+- Để cấu hình Bonding trên Ubuntu ta truy cập vào file yaml để chỉnh sửa. Lưu ý : Nhớ backup file config để roll-back khi cần `cp /etc/netplan/(file yaml) /etc/netplan/(file yaml).bak`
+- final netplan config :
+    ```
+    network:
+        renderer: networkd
+        ethernets:
+            ens33:
+                dhcp4: no
+            ens34:
+                dhcp4: no
+    bonds:
+        bond0:
+            interfaces: [ens33, ens34]
+            addresses: [10.88.88.22/24]
+            routes:
+                - to: default
+                via: 10.88.88.2
+            nameservers:
+                search: [google.com]
+                addresses: [8.8.8.8, 8.8.4.4]
+            parameters:
+                mode: balance-alb
+                mii-monitor-interval: 100
+    version: 2
+    ```
+- áp dụng cấu hình : `sudo netplan apply`
+- dùng lệnh `ip a` để kiểm tra trạng thái của các interface SLAVE và MASTER.
+- xem thông tin của bond trong `/proc/net/bonding/bond0`
+
+    ![a](https://imgur.com/BTZneX7.png)
+
+    ![a](https://imgur.com/WdTMVAs.png)
