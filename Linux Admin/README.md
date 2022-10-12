@@ -10,3 +10,4 @@ Mục Lục
 ### II. Disk Management
 
 1. [Disk Devices](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.1%20Disk%20Device.md)
+2. [Disk Partitions](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.2%20Disk%20Partitions.md)
