@@ -13,3 +13,4 @@ Mục Lục
 2. [Disk Partitions](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.2%20Disk%20Partitions.md)
 3. [File Systems](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.3%20File%20Systems.md)
 4. [Mounting](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.4%20Mounting.md)
+5. [Troubleshooting Tools](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.5%20Troubleshooting%20tools.md)
