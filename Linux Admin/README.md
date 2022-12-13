@@ -20,3 +20,4 @@ Mục Lục
 ### V. Network Management
 
 1. [General Networking](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.1%20T%C3%ACm%20hi%E1%BB%83u%20chung%20v%E1%BB%81%20Network.md)
+2. [Interface Configuration](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.2%20Interface%20Configuration.md)
