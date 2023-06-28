@@ -17,6 +17,7 @@ Mục Lục
 6. [RAID on Linux](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.6%20Introduction%20to%20RAID.md)
 7. [Logical Volume Management](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.7%20Logical%20Volume%20Management.md)
 8. [iSCSI devices](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.8%20iSCSI%20devices.md)
+9. [Introduction to Multipathing](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.9%20Introduction%20to%20Multipathing.md)
 
 ### V. Network Management
 
