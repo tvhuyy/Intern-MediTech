@@ -19,6 +19,10 @@ Mục Lục
 8. [iSCSI devices](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.8%20iSCSI%20devices.md)
 9. [Introduction to Multipathing](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/2.9%20Introduction%20to%20Multipathing.md)
 
+### III. Boot Management
+
+1. [Bootloader](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/3.1%20Bootloader.md)
+
 ### V. Network Management
 
 1. [General Networking](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.1%20T%C3%ACm%20hi%E1%BB%83u%20chung%20v%E1%BB%81%20Network.md)
