@@ -12,7 +12,7 @@ Mục Lục
 ### II. Installing Linux
 
 1. [Cài đặt một số bản phân phối Linux](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Basic/2.1%20C%C3%A0i%20%C4%91%E1%BA%B7t%20m%E1%BB%99t%20s%E1%BB%91%20b%E1%BA%A3n%20ph%C3%A2n%20ph%E1%BB%91i%20Linux.md)
-2. [Linux Architecture](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Basic/2.2%20Linux%20Architecture.md)
+2. [Linux Architecture](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Basic/Linux%20Fundamentals/2.2%20Linux%20Architecture.md)
 
 ### III. Command "man" và hệ thống phân cấp
 
