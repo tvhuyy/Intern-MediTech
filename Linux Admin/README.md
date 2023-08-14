@@ -22,6 +22,7 @@ Mục Lục
 ### III. Boot Management
 
 1. [Bootloader](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/3.1%20Bootloader.md)
+2. [Init, Systemd and runlevels](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/3.2%20Init%2C%20Systemd%20and%20runlevels.md)
 
 ### V. Network Management
 
