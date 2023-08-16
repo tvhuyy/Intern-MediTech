@@ -24,6 +24,10 @@ Mục Lục
 1. [Bootloader](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/3.1%20Bootloader.md)
 2. [Init, Systemd and runlevels](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/3.2%20Init%2C%20Systemd%20and%20runlevels.md)
 
+### IV. System Management
+
+1. [Scheduling](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.1%20Scheduling.md)
+
 ### V. Network Management
 
 1. [General Networking](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.1%20T%C3%ACm%20hi%E1%BB%83u%20chung%20v%E1%BB%81%20Network.md)
