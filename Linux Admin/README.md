@@ -27,6 +27,7 @@ Mục Lục
 ### IV. System Management
 
 1. [Scheduling](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.1%20Scheduling.md)
+2. [Logging](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.2%20Logging.md)
 
 ### V. Network Management
 
