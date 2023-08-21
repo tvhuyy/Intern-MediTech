@@ -29,6 +29,7 @@ Mục Lục
 1. [Scheduling](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.1%20Scheduling.md)
 2. [Logging](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.2%20Logging.md)
 3. [Memory Management](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.3%20Memory%20Management.md)
+4. [Resource Monitoring](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/4.4%20Resource%20Monitoring.md)
 
 ### V. Network Management
 
