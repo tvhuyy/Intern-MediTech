@@ -38,3 +38,4 @@ Mục Lục
 2. [Interface Configuration](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.2%20Interface%20Configuration.md)
 3. [Network Sniffing](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.3%20Network%20Sniffing.md)
 4. [Binding and Bonding](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.4%20Binding%20and%20Bonding.md)
+5. [SSH Client and Server](https://github.com/tvhuyy/My-Research/blob/master/Linux%20Admin/Docs%20Linux%20Admin/5.5%20SSH%20client%20and%20server.md)
